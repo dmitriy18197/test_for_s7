@@ -22,7 +22,7 @@ public class ConsumerService {
     ) {
         log.info("Received new message: id - {}, value - {}", id, dto.toString());
         MultipliedSumResult result = getMultipliedSumResult(id, dto);
-        log.info("Processed message: {}", result.toString());
+        log.debug("Processed message: {}", result.toString());
     }
 
     private MultipliedSumResult getMultipliedSumResult(UUID id, ProducerDto dto) {
