@@ -14,28 +14,28 @@
     {ZOOKEPER_HOME}/bin/zkServer.sh start<br>
   </li>
   <li>
-     Далее запускаем Kafka
-     {KAFKA_HOME}/bin/kafka-server-start.sh {KAFKA_HOME}/config/server.properties
+     Далее запускаем Kafka<br>
+     {KAFKA_HOME}/bin/kafka-server-start.sh {KAFKA_HOME}/config/server.properties<br>
   </li>  
 </ol>
 
 # Запуск producer
-В терминале переходим в корень проекта
-И исполняем
-mvn spring-boot:run
+В терминале переходим в корень проекта<br>
+И исполняем<br>
+mvn spring-boot:run<br>
 
 # Запуск consumer
-Аналогично, только
-mvn spring-boot:run -Dspring-boot.run.arguments==-loggging.level.com.example.consumer=DEBUG
+Аналогично, только<br>
+mvn spring-boot:run -Dspring-boot.run.arguments=--logging.level.com.example.consumer=DEBUG<br>
 
 # Проверка
-Надеюсь, все заработало
-
-Открываем какой-нибудь rest клиент
-И отправляем PUT запрос:
-content-type: application/json
-http://localhost:8080/test/225eeda1-b71e-4836-b009-c532873d9021/
-Пример body:
+Надеюсь, все заработало<br>
+<br>
+Открываем какой-нибудь rest клиент<br>
+И отправляем PUT запрос: <br>
+content-type: application/json<br>
+http://localhost:8080/test/225eeda1-b71e-4836-b009-c532873d9021/<br>
+Пример body:<br>
 {
   "name": "name",
   "sum": 1,
